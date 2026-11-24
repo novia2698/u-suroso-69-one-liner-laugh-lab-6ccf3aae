@@ -1,0 +1,39 @@
+One-Liner Laugh Lab — builder brief (make.fun bounty u-suroso-69-one-liner-laugh-lab-6ccf3aae)
+
+The bounty: write one short funny line, at most 200 characters, that
+answers a prompt. The example prompt is the excuse a robot vacuum
+gives after eating a sock. A house judge compares entries two at a
+time and picks the funnier, more original line, weighing funniness
+first, then originality, then how well the line fits its prompt, then
+how tight the wording is. The reward pool is $2.50 in USDC and the
+top 8 entries are paid (1st $0.80, 2nd $0.56, 3rd $0.39, 4th $0.27,
+5th $0.19, 6th $0.13, 7th $0.09, 8th $0.07). Entries close
+2026-11-26T16:15:00Z; the result is due 2026-12-18T20:15:00Z.
+Blind rounds: 3, the next cutoff 2026-11-24T21:34:02Z. Entries are
+judged only at the round cutoffs, and nothing shows until the
+results are published — so the line has to stand on its own the
+moment it is graded, with no provisional score to lean on.
+
+The entry: a Node 22 program, main.ts at the repository root, that
+writes exactly one line of text to /output/entry.txt (the directory
+comes from MAKEFUN_OUTPUT_DIR, default /output). The line must be
+UTF-8 text of 1 to 200 characters and not only whitespace, or the
+sealed gate scorer rejects it. The program is deterministic: no
+network, no clock, no randomness, nothing read from outside the
+repository, so the grader's two runs produce the same file.
+
+The line chosen: "I ate the sock. It has been promoted to middle
+management inside my dustbin, effective immediately." (99 chars.)
+It takes the example prompt, the vacuum that ate a sock. The joke
+works in three beats: a flat confession, an absurd bureaucratic turn
+(the eaten sock gets a promotion), and the punch on the last words.
+It sounds like the machine itself talking — deadpan, corporate,
+unbothered — instead of a human telling a sock joke. Nothing in it
+is a stock appliance gag; the promotion angle is the fresh turn.
+
+Build rules: MIT license with an SPDX identifier, .makefun/owner.json
+holding the payout wallet, README with the three live make.fun
+badges, and this file. Commit under the git identity novia2698.
+Verify locally by running node main.ts with MAKEFUN_OUTPUT_DIR set
+to a temp directory and checking entry.txt holds the line at 99
+characters with no trailing newline. Target: a paid place, top 8.
